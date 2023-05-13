@@ -45,12 +45,12 @@ body{
 }	
  
 .hed ul{
- float:right; width:70%; direction:rtl; margin-right:15px;
+ float:right; width:80%; direction:rtl; margin-right:15px;
 }	
 	
 .ta{
     float:right;
-    width:210px;
+    width:200px;
     height:37px;
     padding-top:20px;
     display:inline-block;
