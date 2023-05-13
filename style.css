@@ -45,19 +45,20 @@ body{
 }	
  
 .hed ul{
- float:right; width:65%; direction:rtl; margin-right:15px;
+ float:right; width:70%; direction:rtl; margin-right:15px;
 }	
 	
 .ta{
     float:right;
-    width:120px;
+    width:130px;
     height:37px;
     padding:0;
     margin:0;
+    padding-top:20px;
     display:inline-block;
 	color:#ddd;
 	text-align:center;
-	font:caption; font-style:normal; font-size:mdeum;	
+	font:caption; font-style:normal; font-size:large;	
 }
 .ta:hover{
   color:#912;
