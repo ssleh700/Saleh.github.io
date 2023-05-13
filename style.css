@@ -141,7 +141,7 @@ direction:rtl;
 }
 
 
-.cont:focus > #he{ /*لاظهار المحتوى عن الضغط على العنوان*/
+.cont:focus  #he{ /*لاظهار المحتوى عن الضغط على العنوان*/
 	position:relative;
 	max-height:1000px; 
 	transition:max-height 0.5s ease-in-out;
