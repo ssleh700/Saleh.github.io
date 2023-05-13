@@ -48,11 +48,9 @@ body{
  float:right; width:70%; direction:rtl; margin-right:15px;
 }	
 	
-.ta{ 
-    margin-right:1px;
-    margin-left:1px;
+.ta{
     float:right;
-    width:150px;
+    width:180px;
     height:37px;
     padding-top:20px;
     display:inline-block;
