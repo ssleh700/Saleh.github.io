@@ -1,4 +1,4 @@
-<style> 
+﻿<style> 
 .lk{
 	
 }
@@ -8,6 +8,7 @@
   	}
 
 body{
+	direction:rtl;
 	background:url('—Pngtree—black minimalist atmospheric wooden background_965794.jpg');
 	background-size:cover;
 	background-attachment:fixed;
@@ -35,30 +36,40 @@ body{
 	width:100%;
 	margin-bottom:50px;
 	z-index:100;
+	transition-duration:0.7s;
+}
+
+.hed:hover{
+	box-shadow:0px 0px 120px 0px rgba(90, 20, 10, 0.8);
 }
 
 .hed h1{
-	float:left; display:inline-block; margin-left:10px;margin-top:10px;color:#800000;
-	text-shadow:8px 8px 5px 1px rgba(8,8,8,0.4),10px 10px 5px 1px rgba(8,8,8,0.2);
+	position:relative;
+	float:left; display:inline-block;margin-top:10px;
+	color:#800000;
+	text-shadow:15px 8px 100px 5px rgba(8,8,8,1),10px 10px 5px 1px rgba(8,8,8,0.2);
+	width:19%;
+	font-size:210%;
+	} 
+.hed ul{
+	position:relative;
+	float:right; width:60%; direction:rtl; margin-right:2%;
+}	
 
 	
-}	
- 
-.hed ul{
- float:right; width:70%; direction:rtl; margin-right:15px;
-}	
-	
-.ta{
+.ta{ 
+	position:relative;
+    margin-right:1px;
+    margin-left:1px;
     float:right;
-    width:130px;
+    width:17%;
     height:37px;
-    padding:0;
-    margin:0;
     padding-top:20px;
     display:inline-block;
 	color:#ddd;
 	text-align:center;
-	font:caption; font-style:normal; font-size:large;	
+	font:caption; font-style:normal; font-size:135%;
+	transition-duration:0.7s;
 }
 .ta:hover{
   color:#912;
@@ -75,7 +86,102 @@ a{
 	text-decoration:none;
 	cursor:pointer;
 }
-/*-------------------------------------------end menu---------------------------------------------*/
+/*------------------------------------------------------------------End menu-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------Start Aside--------------------------------------------------------------------*/
+
+
+#menu{/*شكل السهم الذي في القائمة */
+	float:right;  margin-top:0px;color:#800000;
+	font-size:50px;
+	width:5%;
+	height:55px;
+	text-align:center;
+	cursor:pointer;
+	transition-duration:0.8s;
+	
+}
+
+#menu:hover{/*تغير شكل السهم الذي في القائمة */
+  border-style:inset;border-width:1.5px;border-color:#555555;
+  background-color:#191919;
+ }
+
+
+.menu{ /*اخفاء قائمة ثانوية */
+	padding:0;
+	margin:0;
+	float:right;
+	position:absolute;
+	margin-top:60px;
+	width:15%;
+	max-width:0;
+	padding-bottom:100%;
+	visibility:hidden;
+	background-color:rgba(50,50,50,0.88);
+	color:rgb(00,00,00);
+	font-size:x-large;
+	text-align:center;
+	transition-duration:0.5s;
+}
+
+
+#menu:hover ~ .menu{/*اظهار القائمة الثانوية */
+	visibility:visible;
+	max-width:100%;
+	transition-duration:3s;
+	visibility:visible;
+	z-index:15;	
+	text-align:center;
+	}
+	
+.menu:hover{/*ابقاء القائمة الثانوية ظاهرة حتى يخرج المؤشر منها*/
+	visibility:visible;
+	max-width:100%;
+	visibility:visible;
+	z-index:15;	
+	text-align:center;
+}
+
+.menu ul{
+	position:absolute;
+	margin:0;padding:0;
+	width:100%;
+}
+	
+	
+.menu li{/*اخفاء القائمة الثانوية */
+	margin:0;
+	padding:0;
+	margin-top:25px;
+	margin-right:5px;
+	list-style:none;
+	width:90%;
+	border-left-style:groove;
+	border-right-style:groove;
+	border-top-style:groove;
+	padding-top:5px;
+	padding-bottom:5px;
+	transition-duration:0.7s;
+}
+.menu li:hover{/*تغير شكل القائمة الثانوية */
+	background-color:rgb(90,10,15);
+	border-left-width:5px;
+	border-top-width:5px;
+}
+
+.menu li:hover .menu{/*اظهار القائمة الثانوية */
+	max-width:100%;
+	visibility:visible;
+	z-index:150;
+}
+
+.menu li a{
+	height:100px;
+}
+	
+/*------------------------------------------------------------------End Aside--------------------------------------------------------------*/
+
 li{
 	font-size:20px;
 	font-style:oblique;
@@ -89,11 +195,11 @@ h2{
 	margin-top:10px;
 }
 img{
-	margin:30px;
+	margin-top:100px;
 }
-/*-------------------------------------------start contit---------------------------------------------*/
+/*-------------------------------------------Start Sontit---------------------------------------------*/
 .content{
-direction:rtl;
+	direction:rtl;
 	position:relative;
 	padding-bottom:50px;
 	width:100%;
@@ -114,6 +220,8 @@ direction:rtl;
     border-style:groove;
     margin-top:10px;
     padding:5px 5px;	
+    cursor:pointer;
+    transition-duration:1s;
 }
 .cont:hover{ /*تضلليل اذا اشرت على المحتوى */
 
@@ -141,7 +249,7 @@ direction:rtl;
 }
 
 
-.cont:hover #he{ /*لاظهار المحتوى عن الضغط على العنوان*/
+.cont:focus > #he{ /*لاظهار المحتوى عن الضغط على العنوان*/
 	position:relative;
 	max-height:1000px; 
 	transition:max-height 0.5s ease-in-out;
@@ -174,13 +282,9 @@ footer{
 footer div{
 		background-color:darkred;
 		text-align:center;
-		z-index:1000;
 		opacity:0.8;
 }
 
 /*------------------------------------------------------------------------End Foter--------------------------------------------------------------------------------------*/
 
-img{
-	margin-top:100px;
-}
 </style>
